@@ -5,13 +5,13 @@ import cleanCSS from 'gulp-clean-css';
 import imagemin from "gulp-imagemin";
 import browserSync from "browser-sync";
 
-const sassOptions = {outputStyle: 'expanded', errLogToConsole: true};
+const sassOptions = {outputStyle: 'expanded', sourceComments: true, errLogToConsole: true};
 
 exports.sass = () => (
     gulp.src('./src/scss/**/*.{scss,sass}')
     .pipe(sass(sassOptions))
     .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write({includeContent: false, sourceRoot: './src'}))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({stream: true}))
 );
