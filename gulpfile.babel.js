@@ -8,18 +8,10 @@ import browserSync from "browser-sync";
 const sassOptions = {outputStyle: 'expanded', errLogToConsole: true};
 
 exports.sass = () => (
-    gulp.src('./src/scss/**/*.scss')
+    gulp.src('./src/scss/**/*.{scss,sass}')
     .pipe(sass(sassOptions))
     .pipe(sourcemaps.init())
-		.pipe(sass({
-			outputStyle: 'expanded',
-			sourceComments: true
-		}).on("error", function(error){
-			console.log(error);
-			console.log("\n******** SASS COMPILE ERROR - check the above SASS output for errors\n\n");
-			beep();
-			sass.logError();
-		}))
+    .pipe(sourcemaps.write({includeContent: false, sourceRoot: './src'}))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({stream: true}))
 );
