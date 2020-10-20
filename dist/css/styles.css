@@ -1,0 +1,309 @@
+/* line 1, src/scss/styles.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, src/scss/styles.css */
+.profile {
+  width: 100%;
+  max-width: 50px;
+  height: auto;
+  display: block;
+  border: 2px solid #fff;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+@media all and (min-width: 992px) {
+  /* line 18, src/scss/styles.css */
+  .profile {
+    max-width: 150px;
+  }
+}
+
+/* line 23, src/scss/styles.css */
+.nav-list {
+  padding: 0;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* line 29, src/scss/styles.css */
+.nav-list .menu-link {
+  display: inline;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 15px;
+}
+
+@media all and (min-width: 992px) {
+  /* line 37, src/scss/styles.css */
+  .nav-list .menu-link {
+    display: block;
+  }
+}
+
+/* line 42, src/scss/styles.css */
+.separator {
+  margin-top: 70px;
+}
+
+/* line 46, src/scss/styles.css */
+* {
+  font-family: lato;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 53, src/scss/styles.css */
+h1 {
+  font-size: 36px;
+  font-family: roboto;
+  color: #ccc;
+}
+
+/* line 59, src/scss/styles.css */
+h2 {
+  font-size: 32px;
+  font-family: roboto;
+  color: #ccc;
+}
+
+/* line 65, src/scss/styles.css */
+h3 {
+  font-size: 28px;
+  font-family: roboto;
+  color: #ccc;
+}
+
+/* line 71, src/scss/styles.css */
+h4 {
+  font-size: 24px;
+  font-family: roboto;
+  color: #ccc;
+}
+
+/* line 77, src/scss/styles.css */
+h5 {
+  font-size: 20px;
+  font-family: roboto;
+  color: #ccc;
+}
+
+/* line 83, src/scss/styles.css */
+h6 {
+  font-size: 16px;
+  font-family: roboto;
+  color: #ccc;
+}
+
+/* line 89, src/scss/styles.css */
+a {
+  color: #4fb1ba;
+  text-decoration: none;
+}
+
+/* line 94, src/scss/styles.css */
+a:hover {
+  text-decoration: underline;
+  color: #98d1d7;
+}
+
+/* line 99, src/scss/styles.css */
+.title, .tagline {
+  text-align: center;
+}
+
+/* line 103, src/scss/styles.css */
+.title {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+/* line 108, src/scss/styles.css */
+.title a {
+  color: #ccc;
+}
+
+/* line 112, src/scss/styles.css */
+.title a:hover {
+  color: white;
+}
+
+@media all and (min-width: 992px) {
+  /* line 117, src/scss/styles.css */
+  .title a {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+  }
+  /* line 122, src/scss/styles.css */
+  .title a:hover {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+/* line 127, src/scss/styles.css */
+.tagline {
+  display: none;
+}
+
+@media all and (min-width: 992px) {
+  /* line 132, src/scss/styles.css */
+  .tagline {
+    display: block;
+    margin: 5px;
+  }
+}
+
+/* line 138, src/scss/styles.css */
+p {
+  color: #ccc;
+}
+
+/* line 142, src/scss/styles.css */
+.read-more {
+  float: right;
+  color: #fff;
+  background-color: #4fb1ba;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* line 150, src/scss/styles.css */
+.read-more:hover {
+  color: #fff;
+}
+
+/* line 154, src/scss/styles.css */
+.post-title {
+  margin-top: 16px;
+}
+
+@media all and (min-width: 992px) {
+  /* line 159, src/scss/styles.css */
+  .navigation li a {
+    line-height: 45px;
+    color: #ccc;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555;
+    text-decoration: none;
+    margin: 0;
+  }
+  /* line 167, src/scss/styles.css */
+  .navigation li a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+}
+
+/* line 174, src/scss/styles.css */
+.latest-posts {
+  margin-bottom: 16px;
+}
+
+/* line 178, src/scss/styles.css */
+.post-title {
+  margin-bottom: 8px;
+}
+
+/* line 182, src/scss/styles.css */
+.metadata {
+  margin-bottom: 8px;
+}
+
+/* line 186, src/scss/styles.css */
+body {
+  background-color: gray;
+  margin: 0;
+}
+
+/* line 191, src/scss/styles.css */
+.container {
+  width: 100vw;
+  display: grid;
+  height: 100vh;
+}
+
+@media all and (min-width: 992px) {
+  /* line 198, src/scss/styles.css */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* line 204, src/scss/styles.css */
+.navigation {
+  background-color: #343a40;
+  text-align: center;
+  padding: 16px;
+}
+
+@media all and (min-width: 992px) {
+  /* line 211, src/scss/styles.css */
+  .navigation {
+    grid-column: span 3;
+    height: 100vh;
+    background: url("../images/wave.jpg") center;
+    box-shadow: inset 0px 0px 450px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* line 222, src/scss/styles.css */
+.content {
+  padding: 16px;
+}
+
+@media all and (min-width: 992px) {
+  /* line 227, src/scss/styles.css */
+  .content {
+    overflow: auto;
+    grid-column: span 9;
+    padding: 64px;
+    overflow: auto;
+  }
+}
+
+/* line 235, src/scss/styles.css */
+.pagination {
+  margin: 15px;
+  text-align: center;
+  list-style-type: none;
+}
+
+/* line 241, src/scss/styles.css */
+.pagination .prev-page {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 246, src/scss/styles.css */
+.pagination .page {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+/* line 252, src/scss/styles.css */
+.pagination .next-page {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 257, src/scss/styles.css */
+.pagination .next-page a {
+  color: #4fb1ba;
+}
+
+/* line 261, src/scss/styles.css */
+.pagination .active {
+  color: #fff;
+}

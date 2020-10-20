@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.profile {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    display: block;
+    border: 2px solid #fff;
+    margin: 0 auto;
+    border-radius: 50%;
+
+    @media all and (min-width: 992px) {
+        max-width: 150px;
+    }
+}
+
+.nav-list {
+    // display: flex;
+    padding: 0;
+    justify-content: center;
+    list-style-type: none;
+
+    .menu-link {
+        display: inline;
+        text-align: center;
+        line-height: 35px;
+        margin-right:15px;
+
+        @media all and (min-width: 992px) {
+            display: block;
+        }
+    }
+}
+
+.separator {
+    margin-top:70px;
+}
