@@ -1,5 +1,158 @@
-body {
-  background-color: blue;
-  margin: 0;
-}
+.bg-cta-grid {
+    display: flex;
+    height: 28.4375rem;
 
+    p {
+        margin-bottom: 0;
+    }
+
+    &.multi-link-cta {
+        height: auto;
+    }
+
+    @media (max-width: 991px) {
+        flex-direction: column;
+        height: auto;
+    }
+
+    &__left-section, &__right-section {
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+    }
+    
+    &__left-section {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+
+        .marketing-section & {
+            background-image: url('../images/img-bg_VCU-Spark.png') ;
+            color: #fff;
+        }
+
+        .multi-link-cta & {
+            flex-direction: column;
+            text-align: left;
+            padding: 15px 45px;
+
+            @media (max-width: 991px) {
+                display: block;
+            }
+        }
+
+        @media (max-width: 991px) {
+            height: 21.25rem;
+        }
+    }
+
+    &__right-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.25rem 4.0625rem;
+
+        .multi-link-cta & {
+            background-image: url('../images/gettyimages-958886668-170667a.jpg') ;
+
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+            padding: 1.25rem 0;
+        }
+    }
+
+    &__cta-content {
+        max-width: 29rem;
+        margin: 5.625rem auto 0;
+
+        h2 {
+            position: relative;
+
+            @media (max-width: 991px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        p {
+            @media (max-width: 991px) {
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+            margin: 3.125rem auto 0;
+            max-width: 20rem;
+        }
+    }
+
+    &__header-divider {
+        margin: 0.9375rem auto 2.8125rem;
+        height: 4.13px;
+        width: 51.6px;
+        background-color: #FFDA76;
+
+        @media (max-width: 991px) {
+            margin: 0.9375rem auto 0.8125rem;
+        }
+    }
+
+    &__cta-logo {
+        position: absolute;
+        bottom: 0;
+        max-width: 14.375rem;
+        padding: 0.875rem;
+        border-bottom: 1px solid black;
+        background: #fff;
+
+        @media (max-width: 991px) {
+            max-width: 11.875rem;
+            padding: .875rem 1.375rem;
+        }
+
+        img {
+            max-width: 10.625rem;
+            @media (max-width: 991px) {
+                max-width: 9.375rem;
+            }
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+    }
+
+    &__content {
+        p {
+            .marketing-section & {
+                margin: 0.9375rem 0;
+            }
+        }
+
+        h4 {
+            @media (max-width: 991px) {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    &__content-icon {
+        margin-right: 1.5625rem;
+    }
+
+    &__content-divider {
+        height: 1px;
+        width: 100%;
+        border: 1px solid #D7D9DA;
+        margin: 2.5rem 0;
+    }
+}

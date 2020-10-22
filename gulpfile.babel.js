@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
-var sourcemaps = require('gulp-sourcemaps');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
 import cleanCSS from 'gulp-clean-css';
 import imagemin from "gulp-imagemin";
 import browserSync from "browser-sync";
@@ -9,8 +10,9 @@ const sassOptions = {outputStyle: 'expanded', sourceComments: true, errLogToCons
 
 exports.sass = () => (
     gulp.src('./src/scss/**/*.{scss,sass}')
-    .pipe(sass(sassOptions))
     .pipe(sourcemaps.init())
+    .pipe(sass(sassOptions))
+    .pipe(autoprefixer('last 2 versions'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({stream: true}))
@@ -45,7 +47,7 @@ gulp.task('serve', () => {
     browserSync.init({
         server: {
             baseDir: './dist',
-            index: 'index.html' 
+            index: 'find-a-provider.html' 
         },
         notify: false,
         injectChanges: true

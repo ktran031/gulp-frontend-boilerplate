@@ -1,0 +1,80 @@
+.find-a-provider {
+    p {
+        margin-bottom: 0;
+    }
+    &__icon {
+        display: grid;
+        grid-template-columns: 3.125rem 1fr;
+        margin: 1.875rem 0;
+        position: relative;
+
+        figure, p {
+            align-self: center;
+        }
+
+        p {
+            margin-left: 1.25rem;
+        }
+
+        &--cta-box {
+            margin-top: 1.875rem;
+            grid-template-columns: 4.375rem 1fr;
+
+            .c-icon {
+                width: 4.0625rem;
+                height: 4.0625rem;
+                background: #fff;
+            }
+
+            p {
+                font-size: 0.875rem;
+
+                span {
+                    font-size: 1.125rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 61.9375rem) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        max-width: 41.875rem;
+        padding-right: 1.25rem;
+
+        @media (max-width: 61.9375rem) {
+            max-width: 100%;
+            padding-right: 0;
+        }
+    }
+
+    &__cta-box {
+        background-color: #013480;
+        max-width: 28.4375rem;
+        padding: 2.5rem 3.125rem;
+        color: #fff;
+        order: 1;
+
+        h2 {
+            margin-bottom: 1.25rem;
+        }
+
+        @media (min-width: 75rem) {
+            height: 24.375rem;  
+        }
+
+        @media (max-width: 61.9375rem) {
+            order: 0;
+            margin-bottom: 1.875rem;
+            max-width: 100%;
+        }
+    }
+}
