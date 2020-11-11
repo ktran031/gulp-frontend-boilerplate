@@ -1,10 +1,12 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
-const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
 import cleanCSS from 'gulp-clean-css';
 import imagemin from "gulp-imagemin";
 import browserSync from "browser-sync";
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
 const sassOptions = {outputStyle: 'expanded', sourceComments: true, errLogToConsole: true};
 
@@ -39,6 +41,8 @@ exports.minifycss = () => (
 
 exports.scripts = () => (
     gulp.src('./src/js/*.js')
+    .pipe(uglify())
+    .pipe(concat('main.js'))
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.reload({stream: true}))
 );
@@ -47,7 +51,7 @@ gulp.task('serve', () => {
     browserSync.init({
         server: {
             baseDir: './dist',
-            index: 'find-a-provider.html' 
+            index: 'becoming-a-patient.html' 
         },
         notify: false,
         injectChanges: true

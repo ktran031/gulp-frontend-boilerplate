@@ -1,0 +1,87 @@
+.becoming-a-patient {
+    max-width: 1020px;
+    margin: 0 auto;
+
+    &__progress {
+        max-width: 730px;
+        margin: 50px auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width:768px) {
+            align-items: flex-start;
+        }
+    }
+
+    &__progress-steps {
+        width: 100%;
+        display: flex;
+        margin-bottom: 50px;
+
+        @media (max-width:768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__step {
+        width: 33.33%;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background: #BFDAEE;
+            width: 40%;
+            height: 1px;
+            left: 190px;
+            top: 50px;
+
+            @media (max-width:768px) {
+                background: none;
+                border-right: 1px solid #BFDAEE;
+                height: 60%;
+                width: 1px;
+                top: 76px;
+                left: 34px;
+            }
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+
+        .c-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+
+            @media (max-width:768px) {
+                width: 70px;
+                height: 70px;
+                margin-right: 20px;
+            }
+        }
+
+        @media (max-width:768px) {
+            margin-bottom: 50px;
+            width: 100%;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__step-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width:768px) {
+            flex-direction: row;
+        }
+    }
+}

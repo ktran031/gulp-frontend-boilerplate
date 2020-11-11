@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="15px" viewBox="0 0 12 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mask</title>
+    <defs>
+        <path d="M14.5,7 C11.5975,7 9.25,9.3475 9.25,12.25 C9.25,16.1875 14.5,22 14.5,22 C14.5,22 19.75,16.1875 19.75,12.25 C19.75,9.3475 17.4025,7 14.5,7 L14.5,7 Z M14.5,14.125 C13.465,14.125 12.625,13.285 12.625,12.25 C12.625,11.215 13.465,10.375 14.5,10.375 C15.535,10.375 16.375,11.215 16.375,12.25 C16.375,13.285 15.535,14.125 14.5,14.125 L14.5,14.125 Z" id="path-1"></path>
+    </defs>
+    <g id="07-WF-Set-1---Find-a-Doctor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Find-a-Doctor-Details" transform="translate(-548.000000, -1745.000000)">
+            <g id="Group-2-Copy-6" transform="translate(516.000000, 1449.000000)">
+                <g id="Group" transform="translate(22.724638, 286.000000)">
+                    <g id="Group-22" transform="translate(0.775362, 3.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#393D3F" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

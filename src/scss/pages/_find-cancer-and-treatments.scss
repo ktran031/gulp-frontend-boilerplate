@@ -1,0 +1,61 @@
+.find-cancer-and-treatments {
+    background: url('../images/img-bg_Massey-Sunburst.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #FFFAEB;
+    padding: 5.9375rem 1rem;
+
+    &__wrapper {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 50rem;
+        height: auto;
+        text-align: center;
+
+        .u-underline-title:after {
+            margin: 1rem auto 1.875rem;
+        }
+
+        p {
+            max-width: 28.75rem;
+            margin: 0 auto 1.875rem;
+        }
+
+        .selectize-input {
+            width: 95%;
+            text-align: left;
+            border-radius: unset;
+
+            @media (max-width: 61.9375rem) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__btn-wrapper {
+        margin-top: 1rem;
+
+        .c-btn {
+            &:first-of-type {
+                margin-right: 1.25rem;
+
+                @media (max-width: 61.9375rem) {
+                    margin-right: 0;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            @media (max-width: 61.9375rem) {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 61.9375rem) {
+        padding: 1.875rem 1rem;
+        background-position: bottom;
+    }
+}

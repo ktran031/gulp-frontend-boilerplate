@@ -1,0 +1,186 @@
+.news-module {
+    &__featured-article {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        & > div {
+            width: 50%;
+
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__featured-article-img {
+        margin-right: 50px;
+
+        @media (max-width: 991px) {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__featured-article-header {
+        color: #1D72AF;
+        font-size: 37px;
+        margin-bottom: 10px;
+        line-height: 42px;
+
+        @media (max-width: 991px) {
+            margin-top: -10px;
+            font-size: 28px;
+            line-height: 32px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 1.25rem;
+
+        &.u-underline-title {
+            &::after {
+                margin: 1rem auto;
+            }
+        }
+    }
+
+    &__slide-image {
+        margin-bottom: 1.25rem;
+    }
+
+    &__category-title {
+        margin-bottom: 0;
+    }
+
+    &__title-header {
+        color: #1D72AF;
+        font-size: 1.5rem;
+        margin-top: -10px;
+        margin-bottom: 1.25rem;
+    }
+
+    &__summary {
+        align-self: flex-start;
+    }
+
+    &__slider {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.875rem;
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .c-btn {
+        display: flex;
+        margin: 3.125rem auto 0;
+
+        &__inner {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 61.9375rem) {
+            margin: 3.75rem auto 0;
+        }
+    }
+
+    // Slider styles
+    .slick-slide {
+        margin: 0 1.25rem;
+    }
+
+    .slick-list {
+        margin: 0 -1.25rem;
+    }
+
+    .slick-list {
+        padding: 0 10% 0 0;
+    }
+
+    .slick-dots {
+        z-index: 10;
+
+        li {
+            margin: 0;
+
+            &.slick-active {
+                button {
+                    &::before {
+                        color: #013480;
+                    }
+                }
+            }
+
+            button {
+                &::before {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        height: 40px;
+        width: 40px;
+        top: 37.5rem;
+        z-index: 20;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .slick-next::before,
+    .slick-prev {
+        content: "";
+        display: block;
+        height: 40px;
+        width: 40px;
+        opacity: 1;
+    }
+
+    .slick-next {
+        right: 0px;
+    }
+
+    .slick-next::before {
+        background: url('../images/right-arrow-blue.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+
+    }
+
+    .slick-prev {
+        background: url('../images/left-arrow-blue.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+        left: 0px;
+    }
+
+    .slick-prev:hover,
+    .slick-prev:focus,
+    .slick-next:hover,
+    .slick-next:focus {
+        background: url('../images/left-arrow-blue.svg') no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}

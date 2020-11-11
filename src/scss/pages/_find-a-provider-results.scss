@@ -1,0 +1,126 @@
+.find-a-provider-results {
+
+    &__result {
+        font-size: 1rem;
+
+        span {
+            font-weight: bold;
+        }
+
+        @media (max-width: 61.9375rem) {
+            text-align: center;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.875rem;
+
+        @media (max-width: 61.9375rem) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 0;
+        }
+    }
+    
+    &__grid-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #D7D9DA;
+        text-align: center;
+        margin-top: 3.75rem;
+        height: 27.5rem;
+
+        img {
+            height: 11.5625rem;
+            width: 8.125rem;
+            position: absolute;
+            top: -1.875rem;
+        }
+
+        .c-btn {
+            margin-bottom: 2rem;
+            position: absolute;
+            bottom: 0;
+        }
+
+        @media (max-width: 61.9375rem) {
+            display: none;
+        }
+
+        &--active {
+            @media (max-width: 61.9375rem) {
+                display: flex;
+            }
+        }
+    }
+
+    &__grid-content-wrapper {
+        margin-top: 1.875rem;
+    }
+
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3.75rem 0;
+
+        @media (max-width: 61.9375rem) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__pagination-btn {
+        img {
+            height: 30px;
+            width: 30px;
+            @media (max-width: 61.9375rem) {
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        &--next {
+            @media (max-width: 61.9375rem) {
+                justify-self: self-end;
+            }
+        }
+    }
+
+    &__pagination-numbers {
+        margin: 0 20px;
+
+        @media (max-width: 61.9375rem) {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column-gap: 20px;
+        }
+    }
+
+    &__pagination-number {
+        margin-right: 20px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &--active {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                right: -14px;
+                background: #FFBA00;
+                width: 35px;
+                height: 2px;
+            }
+
+        }
+    }
+}

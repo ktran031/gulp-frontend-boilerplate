@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Massey News Center Search Bar Component</title>
+</head>
+
+<body>
+    <div class="u-margin-top-large">&nbsp;</div>
+
+    <div class="l-container">
+            <nav class="news-search-nav" role="navigation">
+                    <!-- Search Nav container -->
+                    <div class="news-search-nav__nav-container">
+                        <ul>
+                            <li class="news-search-nav__nav-item news-search-nav__nav-item--active"><a href="#">All</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">Center News &amp; Funding</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">Clinical</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">COVID-19</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">Diet &amp; Nutrition</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">Prevention &amp; Control</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">Research</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">Technology</a></li>
+                            <li class="news-search-nav__nav-item"><a href="#">Technology</a></li>
+                            <li class="news-search-nav__nav-item news-search-nav__nav-item--dropdown"><a href="#">More</a>
+                                <ul class="news-search-nav__dropdown">
+                                    
+                                    <li><a href="#">Sub-1</a></li>
+                                    <li><a href="#">Sub-2</a></li>
+                                    <li><a href="#">Sub-3</a></li>
+                                    <li><a href="#">Sub-4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Search bar container -->
+                    <div class="news-search-nav__search-container">
+                        <!-- Only show on mobile -->
+                        <select class="news-search-nav__search-categories" id="news-search-categories" placeholder="All Categories">
+                            <option value="">All Categories</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                        </select>
+            
+                        <input type="text" class="news-search-nav__news-search" id="news-search"
+                            placeholder="Search Massey Cancer Center News...">
+            
+                        <button class="c-btn c-btn--action ">
+                            <div class="c-btn__inner">
+                                <a href="#">SEARCH</a>
+                            </div>
+                        </button>
+                    </div>
+                </nav>
+    </div>
+</body>
+
+<script src="js/main.js"></script>
+
+</html>

@@ -1,0 +1,63 @@
+.mini-cards {
+    h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    hr {
+        background: #BFDAEE;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .c-arrow-link {
+        color: #1D72AF;
+    }
+
+    .c-grid-item {
+        position: relative;
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            border-right: 1px solid #BFDAEE;
+            width: 1px;
+            height: 100%;
+            right: 0;
+            top: 0;
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 991px) {
+            display: block;
+            border-bottom: 1px solid #BFDAEE;
+            padding: 0 0 20px;
+
+            &::after {
+                display: none;
+            }
+
+            &:first-of-type {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .c-grid-content {
+        padding: 0 15px;
+
+        @media (max-width: 991px) {
+            padding: 0;
+        }
+    }
+}
