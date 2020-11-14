@@ -51,7 +51,7 @@ gulp.task('serve', () => {
     browserSync.init({
         server: {
             baseDir: './dist',
-            index: 'becoming-a-patient.html' 
+            index: 'search-landing.html' 
         },
         notify: false,
         injectChanges: true
