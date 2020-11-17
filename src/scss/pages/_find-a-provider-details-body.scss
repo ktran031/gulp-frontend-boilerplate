@@ -1,123 +1,114 @@
-.find-a-provider-details-body {
+/*------------------------------------*\
+    #LOCATION ITEM CARD
+\*------------------------------------*/
+.location-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid #D7D9DA;
+    padding: 1.25rem;
 
-    &__wrapper {
-        max-width: 52.5rem;
+    &--columns {
+        flex-direction: row;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
     }
+
     &__content {
-        margin-top: 45px;
-        h2 {
-            margin-bottom: 1.25rem;
-        }
+        margin-left: 25px;
 
-        a {
-            color: #1D72AF;
-        }
-
-        ul {
-            padding-left: 5px;
-        }
-
-        hr {
-            background: #C2D1D9;
-            width: 95%;
+        @media (max-width: 991px) {
+            margin: 0 auto;
         }
     }
 
-    &__locations, &__videos {
-        display: grid;
-        grid-gap: 1.25rem;
-        grid-template-columns: repeat(auto-fill, minmax(25.625rem, 1fr) );
-        margin-bottom: 50px;
-
-        @media (max-width: 61.9375rem) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    &__location {
+    &__icon-wrapper {
         display: flex;
-        flex-direction: column;
-        border: 1px solid #D7D9DA;
-        padding: 1.25rem;
-    }
 
-    &__location-map {
-        margin-bottom: 1.25rem;
+        .location-card__icon {
+            &:first-of-type {
+                margin-right: 60px;
 
-        @media (max-width: 61.9375rem) {
-            height: 9.375rem;
-            width: 18.75rem;
-            margin: 0 auto 1.25rem;
-        }
-    }
-
-    &__location-name {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-        color: #1D72AF;
-    }
-
-    &__icon, &__icon-content {
-        display: flex;
-    }
-
-    &__icon {
-        margin-bottom: 1.25rem;
-
-        .c-icon {
-            width: 1.875rem;
-            height: 1.875rem;
-
-            img {
-                height: 15px;
-                width: 10px;
-            }
-        }
-    }
-
-    &__icon-content {
-        flex-direction: column;
-        margin-left: 15px;
-        p {
-            margin-bottom: 5px;
-        }
-        a {
-            color: #1D72AF;
-        }
-    }
-
-    &__videos {
-        @media (max-width: 61.9375rem) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    &__news {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-column-gap: 1.875rem;
-        margin-bottom: 1.875rem;
-
-        @media (max-width: 61.9375rem) {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__news-content {
-        .u-underline-title {
-            font-size: 0.875rem;
-
-            &::after {
-                width: 1.25rem;
-                height: 3px;
-                margin: 10px 0;
+                @media (max-width: 991px) {
+                    margin-right: 0;
+                }
             }
         }
 
-        h3 {
-            font-size: 1.5rem;
-            color: #1D72AF;
+        @media (max-width: 991px) {
+            display: block;
         }
     }
+}
+
+.location-card__map {
+    margin-bottom: 1.25rem;
+}
+
+@media (max-width: 61.9375rem) {
+    .location-card__map {
+        height: 9.375rem;
+        width: 18.75rem;
+        margin: 0 auto 1.25rem;
+    }
+}
+
+.location-card__name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1D72AF;
+}
+
+.location-card__name>a {
+    color: #1D72AF;
+}
+
+.location-card__icon,
+.location-card__icon-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.location-card__icon {
+    margin-bottom: 1.25rem;
+}
+
+.location-card .c-icon {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.location-card__icon .c-icon img {
+    height: 15px;
+    width: 10px;
+}
+
+.location-card__icon-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.location-card__icon-content p {
+    margin-bottom: 5px;
+}
+
+.location-card__icon-content a {
+    color: #1D72AF;
+}
+
+.location-card__phone {
+    font-size: 1.3125rem;
+    font-weight: 500;
+    line-height: 1;
 }

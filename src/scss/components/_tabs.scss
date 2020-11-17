@@ -1,0 +1,98 @@
+.c-tabs {
+    border: 1px solid #D7D9DA;
+
+    &__container {
+        ul {
+            display: flex;
+            border-bottom: 1px solid #D7D9DA;
+            flex-direction: column;
+
+            @media (min-width: 991px) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__tab-item {
+        position: relative;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        background: #F0F7FC;
+        border-bottom: 1px solid #D7D9DA;
+        cursor: pointer;
+
+        a {
+            color: #1D72AF;
+        }
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        &--active {
+            background: #fff;
+            border-top: 4px solid #FFBA00;
+            border-bottom: 2px solid #D7D9DA;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background: #fff;
+                height: 1px;
+                width: 100%;
+                right: 20px;
+                bottom: -1px;
+                left: 0;
+            }
+
+            a {
+                color: #000;
+                font-weight: bold;
+            }
+
+            &:not(:first-of-type) {
+                @media (min-width: 991px) {
+                    border-left: 1px solid #D7D9DA;
+                }
+            }
+
+            &:last-of-type {
+                border-right: none;
+                border-bottom: 1px solid #D7D9DA;
+
+                @media (min-width: 991px) {
+                    border-bottom: none;
+                }
+            }
+
+            @media (min-width: 991px) {
+                border-right: 1px solid #D7D9DA;
+                border-bottom: 1px solid #D7D9DA;
+                width: 20%;
+            }
+        }
+
+        @media (min-width: 991px) {
+            width: 20%;
+            border-bottom: none;
+        }
+    }
+
+    &__content-container {
+        padding: 40px;
+    }
+
+    &__content {
+        display: none;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+    
+}
